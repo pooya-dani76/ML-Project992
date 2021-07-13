@@ -1,0 +1,5 @@
+put your data set in path 'dataset/train' and rename ID & text file to 'Train-Data.csv' and rename ID & Label data to 'Train-GT.csv'
+
+put file you want predict on it to path 'dataset/validation' to 'Validation-Data.csv'
+
+after prediction , predicted file will create in Result folder named  'PredictResult.csv'
