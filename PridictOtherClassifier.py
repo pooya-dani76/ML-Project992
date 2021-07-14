@@ -2,13 +2,6 @@ from joblib import load
 from sklearn.metrics import f1_score ,accuracy_score , roc_auc_score  ,confusion_matrix , classification_report , plot_confusion_matrix
 import pandas as pd
 import matplotlib.pyplot as plt
-# from CreateDataFrame import JoinCSV
-
-# JoinCSV('dataset/validation/Validation-Data.csv',
-#         'dataset/validation/Validation-GT.csv', 'dataset/validation/ValidationDataSet.csv')
-
-# JoinCSV('dataset/test/Test-Data.csv',
-#         'dataset/test/Test-GT.csv', 'dataset/test/TestDataSet.csv')
 
 def Report():
     print('Loading Models...')
@@ -36,31 +29,6 @@ def Report():
     TestText = BigramVectorizer.transform(TestText)
     TestText = BigramTFIDFTransformer.transform(TestText)
 
-    plot_confusion_matrix(AdaBoostModel , ValidationText , ValidationLabel )
-    plt.show() 
-    plot_confusion_matrix(AdaBoostModel , TestText , TestLabel )
-    plt.show()
-
-    plot_confusion_matrix(SGDModel , ValidationText , ValidationLabel )
-    plt.show()
-    plot_confusion_matrix(SGDModel , TestText , TestLabel )
-    plt.show()
-
-    plot_confusion_matrix(LogesticModel , ValidationText , ValidationLabel )
-    plt.show()
-    plot_confusion_matrix(LogesticModel , TestText , TestLabel )
-    plt.show()
-
-    plot_confusion_matrix(SVMModel , ValidationText , ValidationLabel )
-    plt.show()
-    plot_confusion_matrix(SVMModel , TestText , TestLabel )
-    plt.show()
-
-    plot_confusion_matrix(RandomForestModel , ValidationText , ValidationLabel )
-    plt.show()
-    plot_confusion_matrix(RandomForestModel , TestText , TestLabel )
-    plt.show()
-
     print('Adaptive boost report:')
     print('On Validation Data:')
     Y1 = AdaBoostModel.predict(ValidationText)
@@ -69,6 +37,8 @@ def Report():
     print(f'Accuracy : {accuracy_score(ValidationLabel ,Y1)}')
     print(f'f1_score : {f1_score(ValidationLabel ,Y1)}')
     print(f'roc_auc_score : {roc_auc_score(ValidationLabel ,Y1)}')
+    plot_confusion_matrix(AdaBoostModel , ValidationText , ValidationLabel )
+    plt.show()
 
     print('On Test Data:')
     Y2 = AdaBoostModel.predict(TestText)
@@ -77,6 +47,8 @@ def Report():
     print(f'Accuracy : {accuracy_score(TestLabel ,Y2)}')
     print(f'f1_score : {f1_score(TestLabel ,Y2)}')
     print(f'roc_auc_score : {roc_auc_score(TestLabel ,Y2)}')
+    plot_confusion_matrix(AdaBoostModel , TestText , TestLabel )
+    plt.show()
 
     ###########################################################################
 
@@ -88,6 +60,8 @@ def Report():
     print(f'Accuracy : {accuracy_score(ValidationLabel ,Y3)}')
     print(f'f1_score : {f1_score(ValidationLabel ,Y3)}')
     print(f'roc_auc_score : {roc_auc_score(ValidationLabel ,Y3)}')
+    plot_confusion_matrix(SGDModel , ValidationText , ValidationLabel )
+    plt.show()
 
     print('On Test Data:')
     Y4 = SGDModel.predict(TestText)
@@ -96,6 +70,8 @@ def Report():
     print(f'Accuracy : {accuracy_score(TestLabel ,Y4)}')
     print(f'f1_score : {f1_score(TestLabel ,Y4)}')
     print(f'roc_auc_score : {roc_auc_score(TestLabel ,Y4)}')
+    plot_confusion_matrix(SGDModel , TestText , TestLabel )
+    plt.show()
 
     ##########################################################################
 
@@ -107,6 +83,8 @@ def Report():
     print(f'Accuracy : {accuracy_score(ValidationLabel ,Y5)}')
     print(f'f1_score : {f1_score(ValidationLabel ,Y5)}')
     print(f'roc_auc_score : {roc_auc_score(ValidationLabel ,Y5)}')
+    plot_confusion_matrix(RandomForestModel , ValidationText , ValidationLabel )
+    plt.show()
 
     print('On Test Data:')
     Y6 = RandomForestModel.predict(TestText)
@@ -115,6 +93,8 @@ def Report():
     print(f'Accuracy : {accuracy_score(TestLabel ,Y6)}')
     print(f'f1_score : {f1_score(TestLabel ,Y6)}')
     print(f'roc_auc_score : {roc_auc_score(TestLabel ,Y6)}')
+    plot_confusion_matrix(RandomForestModel , TestText , TestLabel )
+    plt.show()
 
     ##########################################################################
 
@@ -126,6 +106,8 @@ def Report():
     print(f'Accuracy : {accuracy_score(ValidationLabel ,Y7)}')
     print(f'f1_score : {f1_score(ValidationLabel ,Y7)}')
     print(f'roc_auc_score : {roc_auc_score(ValidationLabel ,Y7)}')
+    plot_confusion_matrix(LogesticModel , ValidationText , ValidationLabel )
+    plt.show()
 
     print('On Test Data:')
     Y8 = LogesticModel.predict(TestText)
@@ -134,6 +116,8 @@ def Report():
     print(f'Accuracy : {accuracy_score(TestLabel ,Y8)}')
     print(f'f1_score : {f1_score(TestLabel ,Y8)}')
     print(f'roc_auc_score : {roc_auc_score(TestLabel ,Y8)}')
+    plot_confusion_matrix(LogesticModel , TestText , TestLabel )
+    plt.show()
 
     ###########################################################################
 
@@ -145,6 +129,8 @@ def Report():
     print(f'Accuracy : {accuracy_score(ValidationLabel ,Y9)}')
     print(f'f1_score : {f1_score(ValidationLabel ,Y9)}')
     print(f'roc_auc_score : {roc_auc_score(ValidationLabel ,Y9)}')
+    plot_confusion_matrix(SVMModel , ValidationText , ValidationLabel )
+    plt.show()
 
     print('On Test Data:')
     Y10 = SVMModel.predict(TestText)
@@ -152,6 +138,8 @@ def Report():
     print(f'Confusion Matrix : {confusion_matrix(TestLabel ,Y10)}')
     print(f'Accuracy : {accuracy_score(TestLabel ,Y10)}')
     print(f'f1_score : {f1_score(TestLabel ,Y10)}')
-    print(f'roc_auc_score : {roc_auc_score(TestLabel ,Y10)}')
+    print(f'roc_auc_score : {roc_auc_score(TestLabel ,Y10)}')  
+    plot_confusion_matrix(SVMModel , TestText , TestLabel )
+    plt.show()
 
 Report()    
