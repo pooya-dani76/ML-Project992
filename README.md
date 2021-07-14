@@ -3,7 +3,7 @@
 Task is Implement a machine learning method for prediction on some movie reviews.
 
 ## Requirements:
-   Run
+      pip install -r Requirements.txt
 
 ## Datasets:
 
