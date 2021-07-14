@@ -121,4 +121,5 @@ All 5 classifiers mentioned above will be store at `Classifiers` folder (Will be
   - Put your dataset in path `dataset/train` and rename ID & text file to `Train-Data.csv` and rename ID & Label data to `Train-GT.csv`
   - Put file you want predict on it to path `dataset/validation` to `Validation-Data.csv`
 
+Good Lock Guys! :trollface:
 
