@@ -2,7 +2,7 @@
 My Master Machine Learning Course Project - Text Sentiment Analysis on IMDB Reviews Dataset
 
 ## Run Model:
-   Just Run 'Main.py' File.
+   Just Run `Main.py` File.
 
 
 ## For Use For Another Train and Test Dataset:
