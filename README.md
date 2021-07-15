@@ -51,7 +51,7 @@ We merge these 2 files into `dataset/test/TestDataSet.csv`. This file containes 
    <img src="https://github.com/pooya-dani76/ML-Project992/blob/main/Confiusion%20Matrix/AdaBoost-Val.png" width = "395"  height = "320">
    </p>
    
-### 2. SGDClassifier(Lineaer Model + Stochastic Gradient Descent):
+### 2. SGDClassifier(Linear Model + Stochastic Gradient Descent):
 
    - Report Result:
    
