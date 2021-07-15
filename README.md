@@ -36,7 +36,7 @@ We merge these 2 files into `dataset/test/TestDataSet.csv`. This file containes 
 ## Training:
    For Training Model(s) we split 75% of `dataset/train/TrainDataFrame.csv` & remaining use for phase 1 validation (25%). 
 
-## Methods reviewed & their results:
+## Reviewed methods & their results:
 ### 1. Adaptive Boosting:
 
    - Report Result:
