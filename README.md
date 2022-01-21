@@ -28,11 +28,11 @@ We merge these 2 files into `dataset/test/TestDataSet.csv`. This file containes 
 ## Preprocessing & Vectorization:
    We test all of these task:
    - Unigram
-   - Unigram + TDIDF
+   - Unigram + TFIDF
    - Bigram
-   - Bigram + TDIDF
+   - Bigram + TFIDF
    
-   And The best one is `Bigram + TDIDF`
+   And The best one is `Bigram + TFIDF`
 
 ## Training:
    For Training Model(s) we split 75% of `dataset/train/TrainDataFrame.csv` & remaining use for phase 1 validation (25%). 
